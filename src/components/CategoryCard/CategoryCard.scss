@@ -1,0 +1,37 @@
+.category-card {
+  flex: 0 0 128px;
+  text-align: center;
+
+  .category-card__tile {
+    display: grid;
+    width: 128px;
+    height: 128px;
+    place-items: center;
+    background: #f4f4f4;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 12%);
+  }
+
+  img {
+    width: 62px;
+    height: 62px;
+    object-fit: contain;
+  }
+
+  p {
+    margin: 20px 0 0;
+    color: #4e4e4e;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  &.is-selected {
+    .category-card__tile {
+      background: #fff;
+      box-shadow: 0 2px 10px rgb(0 0 0 / 18%);
+    }
+
+    p {
+      color: #3019b2;
+    }
+  }
+}

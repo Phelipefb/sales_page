@@ -1,0 +1,91 @@
+.product-card {
+  width: 304px;
+  height: 500px;
+  box-sizing: border-box;
+  padding: 32px 12px 12px;
+  border: 0;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 3px 19px 0 rgb(0 0 0 / 22%);
+
+  img {
+    display: block;
+    box-sizing: border-box;
+    width: 278.1px;
+    height: 228px;
+    object-fit: contain;
+  }
+
+  img + p {
+    min-height: 46px;
+    margin: 9px 0 0;
+    color: #3f3f40;
+    font-family: Poppins, sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: normal;
+  }
+
+  .product-card__pricing {
+    margin-top: 12px;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .product-card__old-price {
+    color: #808080;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .product-card__price {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    color: #3f3f40;
+  }
+
+  .product-card__installments {
+    color: #3f3f40;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .product-card__shipping {
+    margin: 8px 0 0;
+    color: #3442b5;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  button {
+    width: 275.85px;
+    height: 44px;
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+    border-radius: 4px;
+    background: #3442b5;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+.product-list > li:first-child .product-card img {
+  border: 1px solid #000;
+}
