@@ -5,9 +5,11 @@ import './App.scss';
 import Header from './components/Header/Header.tsx';
 import Hero from './components/Hero/Hero.tsx';
 import CategoryList from './components/CategoryList/CategoryList.tsx';
-import ProductCard from './components/ProductCard/ProductCard.tsx';
-import ProductTabs from './components/ProductTabs/ProductTabs.tsx';
 import ProductModal from './components/ProductModal/ProductModal.tsx';
+import PartnerBanners from './components/PartnerBanners/PartnerBanners.tsx';
+import BrandList from './components/BrandList/BrandList.tsx';
+import ProductShowcase from './components/ProductShowcase/ProductShowcase.tsx';
+import Newsletter from './components/Newsletter/Newsletter.tsx';
 
 function App() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -36,17 +38,32 @@ function App() {
       <main>
         <Hero />
         <CategoryList />
-        <h2>Produtos relacionados</h2>
-        <ProductTabs />
-        <ul className="product-list">
-          {products.map((product, index) => (
-            <ProductCard
-              key={`${product.productName}-${index}`}
-              product={product}
-              onViewDetails={setSelectedProduct}
-            />
-          ))}
-        </ul>
+
+        <ProductShowcase
+          products={products}
+          onViewDetails={setSelectedProduct}
+          showTabs
+        />
+
+        <PartnerBanners />
+
+        <ProductShowcase
+          products={products}
+          onViewDetails={setSelectedProduct}
+          showViewAll
+        />
+
+        <PartnerBanners />
+
+        <BrandList />
+
+        <ProductShowcase
+          products={products}
+          onViewDetails={setSelectedProduct}
+          showViewAll
+        />
+
+        <Newsletter />
 
         {selectedProduct && (
           <ProductModal

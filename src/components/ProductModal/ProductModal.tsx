@@ -36,39 +36,48 @@ function ProductModal({
         <img src={product.photo} alt={product.productName} />
 
         <div>
-          <h2 id="modal-title">{product.productName}</h2>
-          <p>{product.descriptionShort}</p>
-          <p className="product-details-link">
-            Veja mais detalhes do produto &gt;
-          </p>
-          <p>
-            {product.price.toLocaleString('pt-BR', {
-              style: 'currency',
-              currency: 'BRL',
-            })}
-          </p>
-
-          <div className="quantity-control">
-            <button
-              type="button"
-              onClick={onDecrease}
-              aria-label="Diminuir quantidade"
-            >
-              −
-            </button>
-            <span>{quantity.toString().padStart(2, '0')}</span>
-            <button
-              type="button"
-              onClick={onIncrease}
-              aria-label="Aumentar quantidade"
-            >
-              +
-            </button>
+          <div className="product-modal__heading">
+            <h2 id="modal-title">{product.productName}</h2>
+            <p className="product-modal__price">
+              {product.price.toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: 'BRL',
+              })}
+            </p>
           </div>
 
-          <button className="buy-button" type="button">
-            Comprar
-          </button>
+          <div className="product-modal__details">
+            <p>{product.descriptionShort}</p>
+            <p className="product-details-link">
+              Veja mais detalhes do produto &gt;
+            </p>
+          </div>
+
+          <div className="product-modal__actions">
+            <div className="quantity-control">
+              <button
+                type="button"
+                onClick={onDecrease}
+                aria-label="Diminuir quantidade"
+              >
+                −
+              </button>
+
+              <span>{quantity.toString().padStart(2, '0')}</span>
+
+              <button
+                type="button"
+                onClick={onIncrease}
+                aria-label="Aumentar quantidade"
+              >
+                +
+              </button>
+            </div>
+
+            <button className="buy-button" type="button">
+              Comprar
+            </button>
+          </div>
         </div>
       </section>
     </div>

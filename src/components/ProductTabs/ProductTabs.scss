@@ -1,7 +1,7 @@
 .product-tabs {
   width: 1280px;
   height: 40px;
-  margin: 0 auto;
+  margin: 4px auto 0;
 
   ul {
     display: grid;
@@ -15,7 +15,7 @@
 
   li {
     min-width: 0;
-    border: 1px solid #dedede;
+    border: 1px solid #bdbdbd;
   }
 
   li + li {
@@ -28,5 +28,16 @@
     padding: 0;
     border: 0;
     background: #fff;
+    color: #3b3b3b;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &.is-active {
+      color: #3442b5;
+      font-weight: 700;
+    }
   }
 }
