@@ -1,0 +1,130 @@
+.site-footer {
+  width: 100%;
+}
+
+.site-footer__main {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 90px;
+  width: 100%;
+  height: 282px;
+  padding: 42px 80px;
+  background-color: #f4f4f4;
+}
+
+.site-footer__brand {
+  display: flex;
+  flex: 0 0 354px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.site-footer__brand > img {
+  display: block;
+  width: 164px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.site-footer__brand > p {
+  width: 354px;
+  margin: 18px 0 0;
+  color: #3f3f40;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.site-footer__social {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  margin-top: 27px;
+}
+
+.site-footer__social a {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+}
+
+.site-footer__social img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 24px;
+  max-height: 24px;
+}
+
+.site-footer__divider {
+  display: block;
+  flex: 0 0 1px;
+  width: 1px;
+  height: 198px;
+  background-color: #dedede;
+}
+
+.site-footer__links {
+  display: grid;
+  grid-template-columns: 121px 150px 160px;
+  gap: 100px;
+  color: rgb(34 34 34 / 71%);
+}
+
+.site-footer__links section h2 {
+  margin: 0 0 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.site-footer__links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer__links li,
+.site-footer__links a {
+  color: inherit;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  text-decoration: none;
+}
+
+.site-footer__links section:nth-child(3) li,
+.site-footer__links section:nth-child(3) a {
+  font-family: 'Poppins', sans-serif;
+}
+
+.site-footer__legal {
+  position: relative;
+  width: 100%;
+  height: 46.842px;
+  background-color: #fff;
+}
+
+.site-footer__legal p {
+  position: absolute;
+  top: 13px;
+  left: 543px;
+  width: 355px;
+  height: 20px;
+  margin: 0;
+  color: #3f3f40;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: normal;
+  text-align: left;
+  white-space: nowrap;
+}

@@ -10,6 +10,7 @@ import PartnerBanners from './components/PartnerBanners/PartnerBanners.tsx';
 import BrandList from './components/BrandList/BrandList.tsx';
 import ProductShowcase from './components/ProductShowcase/ProductShowcase.tsx';
 import Newsletter from './components/Newsletter/Newsletter.tsx';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -64,6 +65,8 @@ function App() {
         />
 
         <Newsletter />
+
+        <Footer />
 
         {selectedProduct && (
           <ProductModal
