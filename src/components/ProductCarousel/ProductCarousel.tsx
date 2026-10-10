@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { Product } from '../../types/product.ts';
 import ProductCard from '../ProductCard/ProductCard.tsx';
+import './ProductCarousel.scss';
 
 interface ProductCarouselProps {
   products: Product[];

@@ -14,7 +14,7 @@ const categories: Category[] = [
 
 function CategoryList() {
   return (
-    <section className="category-list">
+    <section className="category-list" aria-label="Categorias de produtos">
       {categories.map((category) => (
         <CategoryCard key={category.name} category={category} />
       ))}

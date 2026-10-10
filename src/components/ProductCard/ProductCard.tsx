@@ -22,7 +22,13 @@ function ProductCard({ product, onViewDetails }: ProductCardProps) {
         className="product-card"
         aria-label={`Produto: ${product.productName}`}
       >
-        <img src={product.photo} alt={product.productName} />
+        <img
+          src={product.photo}
+          alt={product.productName}
+          width="278"
+          height="228"
+          loading="lazy"
+        />
 
         <p className="product-card__description">{product.descriptionShort}</p>
 

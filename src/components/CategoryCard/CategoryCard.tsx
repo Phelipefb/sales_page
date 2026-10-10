@@ -7,15 +7,15 @@ interface CategoryCardProps {
 
 function CategoryCard({ category }: CategoryCardProps) {
   return (
-    <article
+    <div
       className={`category-card${category.selected ? ' is-selected' : ''}`}
     >
       <div className="category-card__tile">
-        <img src={category.image} alt="" />
+        <img src={category.image} alt="" width="62" height="62" />
       </div>
 
       <p>{category.name}</p>
-    </article>
+    </div>
   );
 }
 

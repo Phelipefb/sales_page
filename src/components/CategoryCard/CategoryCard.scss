@@ -7,6 +7,7 @@
     width: 128px;
     height: 128px;
     place-items: center;
+    border-radius: 10px;
     background: #f4f4f4;
     box-shadow: 0 2px 8px rgb(0 0 0 / 12%);
   }
@@ -20,7 +21,9 @@
   p {
     margin: 22px 0 0;
     color: #4e4e4e;
+    font-family: 'Poppins', sans-serif;
     font-size: 14px;
+    font-weight: 600;
     line-height: 21px;
   }
 

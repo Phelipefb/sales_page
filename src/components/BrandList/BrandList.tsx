@@ -10,7 +10,13 @@ function BrandList() {
       <ul>
         {brands.map((brand) => (
           <li key={brand}>
-            <img src="/assets/Logo.png" alt="Econverse" />
+            <img
+              src="/assets/Logo.png"
+              alt="Econverse"
+              width="117"
+              height="35"
+              loading="lazy"
+            />
           </li>
         ))}
       </ul>

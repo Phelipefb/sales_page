@@ -1,6 +1,7 @@
 import type { Product } from '../../types/product.ts';
 import ProductCarousel from '../ProductCarousel/ProductCarousel.tsx';
 import ProductTabs from '../ProductTabs/ProductTabs.tsx';
+import './ProductShowcase.scss';
 
 interface ProductShowcaseProps {
   products: Product[];

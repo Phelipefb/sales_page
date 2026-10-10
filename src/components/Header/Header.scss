@@ -128,17 +128,18 @@
   align-items: center;
   justify-content: space-between;
   height: 40px;
+  margin: 0;
   padding: 0 max(16px, calc((100% - 1142px) / 2));
   box-shadow: 0 8px 16px rgb(57 48 19 / 12%);
+  list-style: none;
 
-  a {
+  li {
     display: flex;
     align-items: center;
     gap: 12px;
     color: #9f9f9f;
     font-size: 12px;
     font-weight: 600;
-    text-decoration: none;
     text-transform: uppercase;
     white-space: nowrap;
 

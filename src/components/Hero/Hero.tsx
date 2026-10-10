@@ -3,7 +3,13 @@ import './Hero.scss';
 function Hero() {
   return (
     <section className="hero">
-      <img src="/assets/Rectangle250.png" alt="" />
+      <img
+        src="/assets/Rectangle250.png"
+        alt=""
+        width="1440"
+        height="390"
+        fetchPriority="high"
+      />
       <h1>Venha conhecer nossas promoções</h1>
       <p>
         <span>50% Off</span> nos produtos

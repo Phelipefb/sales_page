@@ -33,7 +33,12 @@ function ProductModal({
           ×
         </button>
 
-        <img src={product.photo} alt={product.productName} />
+        <img
+          src={product.photo}
+          alt={product.productName}
+          width="247"
+          height="192"
+        />
 
         <div>
           <div className="product-modal__heading">

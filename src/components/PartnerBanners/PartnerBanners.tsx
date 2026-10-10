@@ -10,7 +10,13 @@ function PartnerBanners() {
     <section className="partner-banners" aria-label="Parceiros">
       {partners.map((partner) => (
         <article className="partner-banner" key={partner.id}>
-          <img src="/assets/MaskGroup.png" alt="" />
+          <img
+            src="/assets/MaskGroup.png"
+            alt=""
+            width="634"
+            height="350"
+            loading="lazy"
+          />
 
           <h2>{partner.title}</h2>
           <p>Lorem ipsum dolor sit amet, consectetur</p>

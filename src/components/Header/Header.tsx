@@ -38,10 +38,14 @@ const categories = [
 ];
 
 const actions = [
-  { icon: 'Vector.png', label: 'Orders' },
-  { icon: 'Heart.png', label: 'Favorites' },
-  { icon: 'UserCircle.png', label: 'Account' },
-  { icon: 'ShoppingCart.png', label: 'Shopping cart' },
+  { icon: 'Vector.png', label: 'Pedidos', size: 24 },
+  { icon: 'Heart.png', label: 'Favoritos', size: 32 },
+  { icon: 'UserCircle.png', label: 'Conta', size: 32 },
+  {
+    icon: 'ShoppingCart.png',
+    label: 'Carrinho de compras',
+    size: 32,
+  },
 ];
 
 function Header() {
@@ -50,7 +54,12 @@ function Header() {
       <div className="header-benefits">
         {benefits.map((benefit) => (
           <div className="header-benefit" key={benefit.icon}>
-            <img src={`/assets/${benefit.icon}`} alt="" />
+            <img
+              src={`/assets/${benefit.icon}`}
+              alt=""
+              width="20"
+              height="20"
+            />
             <span>{benefit.text}</span>
           </div>
         ))}
@@ -58,7 +67,12 @@ function Header() {
 
       <div className="header-main">
         <a className="header-logo" href="/" aria-label="Econverse home">
-          <img src="/assets/Logo.png" alt="Econverse" />
+          <img
+            src="/assets/Logo.png"
+            alt="Econverse"
+            width="139"
+            height="42"
+          />
         </a>
 
         <form
@@ -66,9 +80,18 @@ function Header() {
           role="search"
           onSubmit={(event) => event.preventDefault()}
         >
-          <input type="search" placeholder="O que você está buscando?" />
-          <button type="submit" aria-label="Search">
-            <img src="/assets/MagnifyingGlass.png" alt="" />
+          <input
+            type="search"
+            aria-label="Buscar produtos"
+            placeholder="O que você está buscando?"
+          />
+          <button type="submit" aria-label="Buscar">
+            <img
+              src="/assets/MagnifyingGlass.png"
+              alt=""
+              width="28"
+              height="28"
+            />
           </button>
         </form>
 
@@ -80,22 +103,32 @@ function Header() {
               key={action.icon}
               aria-label={action.label}
             >
-              <img src={`/assets/${action.icon}`} alt="" />
+              <img
+                src={`/assets/${action.icon}`}
+                alt=""
+                width={action.size}
+                height={action.size}
+              />
             </button>
           ))}
         </div>
       </div>
 
-      <nav className="header-nav" aria-label="Product categories">
+      <ul className="header-nav" aria-label="Categorias de produtos">
         {categories.map((category) => (
-          <a href="#" key={category}>
+          <li key={category}>
             {category === 'Assinatura' && (
-              <img src="/assets/CrownSimple.png" alt="" />
+              <img
+                src="/assets/CrownSimple.png"
+                alt=""
+                width="20"
+                height="20"
+              />
             )}
             {category}
-          </a>
+          </li>
         ))}
-      </nav>
+      </ul>
     </header>
   );
 }

@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import findProducts from './services/productService';
 import type { Product } from './types/product.ts';
-import './App.scss';
 import Header from './components/Header/Header.tsx';
 import Hero from './components/Hero/Hero.tsx';
 import CategoryList from './components/CategoryList/CategoryList.tsx';
@@ -22,15 +21,19 @@ function App() {
   useEffect(() => {
     findProducts()
       .then(setProducts)
-      .catch((error: unknown) => {
-        console.error('Product request failed:', error);
-        setError('Failed to fetch products');
+      .catch(() => {
+        setError('Não foi possível carregar os produtos.');
       })
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <p>Loading Products...</p>;
-  if (error) return <p>{error}</p>;
+  function handleViewDetails(product: Product) {
+    setQuantity(1);
+    setSelectedProduct(product);
+  }
+
+  if (loading) return <p role="status">Carregando produtos...</p>;
+  if (error) return <p role="alert">{error}</p>;
 
   return (
     <>
@@ -42,7 +45,7 @@ function App() {
 
         <ProductShowcase
           products={products}
-          onViewDetails={setSelectedProduct}
+          onViewDetails={handleViewDetails}
           showTabs
         />
 
@@ -50,7 +53,7 @@ function App() {
 
         <ProductShowcase
           products={products}
-          onViewDetails={setSelectedProduct}
+          onViewDetails={handleViewDetails}
           showViewAll
         />
 
@@ -60,26 +63,24 @@ function App() {
 
         <ProductShowcase
           products={products}
-          onViewDetails={setSelectedProduct}
+          onViewDetails={handleViewDetails}
           showViewAll
         />
 
         <Newsletter />
-
-        <Footer />
-
-        {selectedProduct && (
-          <ProductModal
-            product={selectedProduct}
-            quantity={quantity}
-            onClose={() => setSelectedProduct(null)}
-            onIncrease={() => setQuantity((current) => current + 1)}
-            onDecrease={() =>
-              setQuantity((current) => Math.max(1, current - 1))
-            }
-          />
-        )}
       </main>
+
+      <Footer />
+
+      {selectedProduct && (
+        <ProductModal
+          product={selectedProduct}
+          quantity={quantity}
+          onClose={() => setSelectedProduct(null)}
+          onIncrease={() => setQuantity((current) => current + 1)}
+          onDecrease={() => setQuantity((current) => Math.max(1, current - 1))}
+        />
+      )}
     </>
   );
 }
