@@ -1,138 +1,131 @@
 # Econverse — Teste Front-End
 
-Página de e-commerce desenvolvida como teste técnico para a vaga de Desenvolvedor Front-End da Econverse.
+Página de e-commerce desenvolvida como teste técnico para a vaga de Desenvolvedor Front-End da Econverse. O projeto reproduz o layout disponibilizado no Figma, consome a lista oficial de produtos e apresenta os detalhes do item selecionado em um modal.
 
-O projeto reproduz o layout fornecido no Figma, apresenta uma vitrine de produtos consumida por API e permite visualizar os detalhes de cada produto em um modal.
+[![Ver projeto online](https://img.shields.io/badge/VER%20PROJETO%20ONLINE-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://sales-page-git-main-phelipebassi.vercel.app/)
 
 ## Tecnologias
 
-- React
-- TypeScript
-- Vite
-- Sass
-- ESLint
+![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-6-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=flat-square&logo=vite&logoColor=white)
+![Sass](https://img.shields.io/badge/Sass-1-CC6699?style=flat-square&logo=sass&logoColor=white)
+![ESLint](https://img.shields.io/badge/ESLint-10-4B32C3?style=flat-square&logo=eslint&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-Deploy-000000?style=flat-square&logo=vercel&logoColor=white)
 
 ## Funcionalidades
 
 - Cabeçalho com benefícios, busca, ações e navegação
 - Banner principal de ofertas
-- Navegação visual por categorias
-- Vitrines de produtos consumidas por API
-- Carousel de produtos
-- Modal com informações do produto selecionado
-- Controle de quantidade no modal
+- Navegação visual por categorias e marcas
+- Vitrines consumindo a API oficial de produtos
+- Carrosséis com controles de navegação
+- Modal com imagem, nome, descrição, preço e quantidade
 - Banners de parceiros
-- Navegação por marcas
 - Formulário de newsletter
 - Rodapé institucional
 
 ## Pré-requisitos
 
-- Node.js 20.19 ou superior
-- npm
+Antes de começar, instale:
+
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/) 20.19+ ou 22.12+
+- npm, incluído na instalação do Node.js
+
+Também é necessário acesso à internet para carregar a API de produtos e as fontes externas. As versões mínimas do Node.js seguem os requisitos do Vite 8.
 
 ## Instalação
 
-Clone o repositório e acesse a pasta do projeto:
+Clone o repositório e acesse a pasta:
 
 ```bash
 git clone https://github.com/Phelipefb/sales_page.git
 cd sales_page
 ```
 
-Instale as dependências:
+Instale exatamente as dependências registradas no `package-lock.json`:
 
 ```bash
-npm install
+npm ci
 ```
 
-## Executar o projeto
-
-Inicie o ambiente de desenvolvimento:
+## Executar em desenvolvimento
 
 ```bash
 npm run dev
 ```
 
-A aplicação estará disponível no endereço exibido pelo Vite, normalmente:
+Abra no navegador o endereço informado pelo Vite, normalmente:
 
 ```text
 http://localhost:5173
 ```
 
-## Compilar o projeto
+O servidor de desenvolvimento encaminha as requisições da API para o domínio da Econverse, evitando bloqueios de CORS.
 
-Gere a versão de produção:
+## Validar o projeto
+
+Execute a análise estática:
+
+```bash
+npm run lint
+```
+
+Gere a build de produção:
 
 ```bash
 npm run build
 ```
 
-Os arquivos compilados serão gerados na pasta `dist`.
-
-## Visualizar a build
-
-Depois de executar o build, inicie a visualização local:
+Depois do build, teste localmente os arquivos gerados:
 
 ```bash
 npm run preview
 ```
 
-## Validação
+A URL será exibida no terminal, normalmente `http://localhost:4173`.
 
-Execute a análise estática do código:
+O projeto não possui uma suíte de testes automatizados. A validação disponível é composta por ESLint, compilação TypeScript, build do Vite e testes manuais.
 
-```bash
-npm run lint
-```
+## Roteiro de teste manual
 
-Para validar completamente a entrega:
-
-```bash
-npm run lint
-npm run build
-```
-
-## Teste manual
-
-Com o projeto em execução:
+Com a aplicação aberta:
 
 1. Confirme o carregamento da lista de produtos.
-2. Navegue pelos produtos utilizando as setas da vitrine.
-3. Clique no botão `COMPRAR` de um produto.
-4. Confirme que o modal apresenta imagem, nome, descrição e preço do produto selecionado.
-5. Teste os controles de aumento e diminuição de quantidade.
+2. Navegue pelas vitrines utilizando as setas laterais.
+3. Clique em `COMPRAR` em um produto.
+4. Verifique se o modal apresenta o produto selecionado.
+5. Teste os controles de aumento e diminuição da quantidade.
 6. Confirme que a quantidade mínima permanece em `01`.
 7. Feche o modal e abra outro produto.
 8. Confirme que a quantidade retorna para `01`.
+9. Verifique o layout em uma janela de 1440 px e zoom de 100%.
+
+## Scripts disponíveis
+
+| Comando | Finalidade |
+|---|---|
+| `npm run dev` | Inicia o servidor de desenvolvimento |
+| `npm run lint` | Executa a análise estática do código |
+| `npm run build` | Valida o TypeScript e gera a build em `dist` |
+| `npm run preview` | Serve localmente a build gerada |
 
 ## API de produtos
 
-Os produtos são carregados da API pública fornecida pela Econverse:
+Os produtos são carregados do JSON público fornecido pela Econverse:
 
 ```text
 https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json
 ```
 
-Durante o desenvolvimento, o Vite encaminha as requisições iniciadas em `/teste-front-end` para o domínio da Econverse. Essa configuração evita problemas de CORS no ambiente local.
+No desenvolvimento e no preview, o proxy do Vite encaminha as requisições iniciadas em `/teste-front-end`. Na publicação, a mesma rota é encaminhada pela Vercel por meio do arquivo `vercel.json`.
 
 ## Layout
 
-O projeto foi desenvolvido com base no layout desktop disponibilizado no Figma, com largura de referência de 1440 pixels.
-
-Foram respeitados:
-
-- Tipografia
-- Cores
-- Espaçamentos
-- Dimensões
-- Componentes
-- Modal de produto
-- Hierarquia visual
+O projeto foi desenvolvido com base no layout desktop do Figma, cuja largura de referência é 1440 px. A implementação considera tipografia, cores, espaçamentos, dimensões, componentes e o modal de produto definidos no design.
 
 ## Organização
-
-Os componentes estão separados por responsabilidade, cada um com seu respectivo arquivo de estilos.
 
 ```text
 src/
@@ -145,9 +138,11 @@ src/
 └── main.tsx
 ```
 
+Cada componente visual possui seu próprio arquivo de estilos Sass.
+
 ## Observações
 
-- Não foram utilizadas bibliotecas de componentes visuais.
-- O projeto utiliza HTML semântico.
-- Foram adicionadas informações básicas de SEO.
-- A referência fornecida contempla apenas o layout desktop.
+- Não foram utilizadas bibliotecas de componentes de interface.
+- A estrutura utiliza HTML semântico.
+- O projeto contém metadados básicos de SEO.
+- A referência fornecida no Figma contempla apenas o layout desktop.

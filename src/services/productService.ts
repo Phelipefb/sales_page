@@ -16,7 +16,11 @@ async function findProducts(): Promise<Product[]> {
     throw new Error('API response indicates failure');
   }
 
-  return data.products;
+  return data.products.map((product) => ({
+    ...product,
+    productName: product.productName.toLocaleUpperCase('pt-BR'),
+    descriptionShort: product.descriptionShort.toLocaleUpperCase('pt-BR'),
+  }));
 }
 
 export default findProducts;
