@@ -15,6 +15,7 @@
   height: 32px;
   border-bottom: 1px solid #eee;
   font-size: 12px;
+  font-weight: 500;
 }
 
 .header-benefit {
@@ -31,6 +32,7 @@
 
   strong {
     color: #3019b2;
+    font-weight: 600;
   }
 }
 
@@ -76,6 +78,12 @@
     color: #3f3f40;
     font: inherit;
     font-size: 14px;
+    font-weight: 500;
+
+    &::placeholder {
+      color: #9f9f9f;
+      opacity: 1;
+    }
   }
 
   button {
@@ -96,7 +104,7 @@
 
 .header-actions {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   width: 216px;
   justify-self: end;
@@ -123,8 +131,6 @@
 .header-action:first-child {
   width: 24px;
   height: 24px;
-  margin-left: 24px;
-  margin-right: -24px;
 }
 
 .header-nav {
@@ -190,10 +196,6 @@
     height: auto;
   }
 
-  .header-action:first-child {
-    margin-left: 0;
-    margin-right: 0;
-  }
 }
 
 @media (max-width: 600px) {

@@ -30,7 +30,20 @@ function ProductModal({
           onClick={onClose}
           aria-label="Fechar detalhes do produto"
         >
-          ×
+          <img
+            className="modal-close__line modal-close__line--first"
+            src="/assets/modal-close-line-1.svg"
+            alt=""
+            width="20"
+            height="2"
+          />
+          <img
+            className="modal-close__line modal-close__line--second"
+            src="/assets/modal-close-line-2.svg"
+            alt=""
+            width="18"
+            height="2"
+          />
         </button>
 
         <img
@@ -65,7 +78,12 @@ function ProductModal({
                 onClick={onDecrease}
                 aria-label="Diminuir quantidade"
               >
-                −
+                <img
+                  src="/assets/modal-minus.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
               </button>
 
               <span>{quantity.toString().padStart(2, '0')}</span>
@@ -75,7 +93,12 @@ function ProductModal({
                 onClick={onIncrease}
                 aria-label="Aumentar quantidade"
               >
-                +
+                <img
+                  src="/assets/modal-plus.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
               </button>
             </div>
 

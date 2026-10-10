@@ -1,4 +1,6 @@
 .partner-banners {
+  position: relative;
+  left: -0.5px;
   display: grid;
   grid-template-columns: repeat(2, 634px);
   gap: 13px;

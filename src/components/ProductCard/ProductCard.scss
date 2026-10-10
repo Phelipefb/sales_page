@@ -14,7 +14,7 @@
     box-sizing: border-box;
     width: 278.1px;
     height: 228px;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   img + p {
@@ -94,4 +94,8 @@
     left: 12.39px;
     bottom: 16px;
   }
+}
+
+.product-list > li:first-child .product-card img {
+  border: 1px solid #000;
 }

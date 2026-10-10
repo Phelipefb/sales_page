@@ -27,7 +27,7 @@
   > img {
     width: 247px;
     height: 192.2px;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   > div {
@@ -44,11 +44,31 @@
     position: absolute;
     top: 17px;
     right: 29px;
+    width: 15px;
+    height: 13px;
+    padding: 0;
     border: 0;
     background: transparent;
-    color: #3f3f40;
-    font-size: 28px;
     cursor: pointer;
+
+    .modal-close__line {
+      position: absolute;
+      top: 5.5px;
+      left: 50%;
+      display: block;
+      height: 2px;
+      transform-origin: center;
+    }
+
+    .modal-close__line--first {
+      width: 19.85px;
+      transform: translateX(-50%) rotate(40.91deg);
+    }
+
+    .modal-close__line--second {
+      width: 18.38px;
+      transform: translateX(-50%) rotate(-45deg);
+    }
   }
 }
 
@@ -128,6 +148,12 @@
     background: transparent;
     color: #271c47;
     cursor: pointer;
+
+    img {
+      display: block;
+      width: 20.31px;
+      height: 19.64px;
+    }
   }
 
   span {

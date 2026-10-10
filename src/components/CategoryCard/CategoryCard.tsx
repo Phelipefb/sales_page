@@ -11,7 +11,12 @@ function CategoryCard({ category }: CategoryCardProps) {
       className={`category-card${category.selected ? ' is-selected' : ''}`}
     >
       <div className="category-card__tile">
-        <img src={category.image} alt="" width="62" height="62" />
+        <img
+          src={category.image}
+          alt=""
+          width={category.imageSize}
+          height={category.imageSize}
+        />
       </div>
 
       <p>{category.name}</p>

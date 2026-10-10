@@ -1,6 +1,7 @@
 .category-list {
+  position: relative;
+  left: -0.5px;
   display: flex;
-  justify-content: space-between;
   gap: 42px;
   width: min(1160px, calc(100% - 48px));
   margin: 39px auto 0;

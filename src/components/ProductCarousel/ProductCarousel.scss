@@ -19,18 +19,21 @@
   position: absolute;
   top: 246px;
   z-index: 2;
-  display: grid;
   width: 32px;
   height: 32px;
-  place-items: center;
+  padding: 0;
   border: 0;
-  border-radius: 50%;
-  background: #fff;
-  box-shadow: 0 2px 5px rgb(0 0 0 / 20%);
-  color: #3f3f40;
+  background: transparent;
   cursor: pointer;
-  font-size: 26px;
-  line-height: 1;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: -4px;
+    display: block;
+    width: 40px;
+    height: 40px;
+  }
 
   &:disabled {
     cursor: default;
@@ -43,4 +46,8 @@
 
 .product-carousel-arrow--next {
   right: 0;
+
+  img {
+    transform: rotate(180deg);
+  }
 }

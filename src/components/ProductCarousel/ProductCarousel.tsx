@@ -23,7 +23,12 @@ function ProductCarousel({ products, onViewDetails }: ProductCarouselProps) {
         disabled={!hasPreviousProducts}
         onClick={() => setCarouselStart((current) => Math.max(0, current - 1))}
       >
-        ‹
+        <img
+          src="/assets/carousel-previous.svg"
+          alt=""
+          width="40"
+          height="40"
+        />
       </button>
 
       <button
@@ -37,7 +42,12 @@ function ProductCarousel({ products, onViewDetails }: ProductCarouselProps) {
           )
         }
       >
-        ›
+        <img
+          src="/assets/carousel-next.svg"
+          alt=""
+          width="40"
+          height="40"
+        />
       </button>
 
       <ul className="product-list">

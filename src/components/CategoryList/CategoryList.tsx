@@ -3,13 +3,48 @@ import CategoryCard from '../CategoryCard/CategoryCard.tsx';
 import './CategoryList.scss';
 
 const categories: Category[] = [
-  { name: 'Tecnologia', image: '/assets/device.png', selected: true },
-  { name: 'Supermercado', image: '/assets/supermercados.png', selected: false },
-  { name: 'Bebidas', image: '/assets/whiskey.png', selected: false },
-  { name: 'Ferramentas', image: '/assets/ferramentas.png', selected: false },
-  { name: 'Saúde', image: '/assets/cuidados-de-saude.png', selected: false },
-  { name: 'Esportes e Fitness', image: '/assets/corrida.png', selected: false },
-  { name: 'Moda', image: '/assets/moda.png', selected: false },
+  {
+    name: 'Tecnologia',
+    image: '/assets/device.png',
+    imageSize: 61,
+    selected: true,
+  },
+  {
+    name: 'Supermercado',
+    image: '/assets/supermercados.png',
+    imageSize: 61,
+    selected: false,
+  },
+  {
+    name: 'Bebidas',
+    image: '/assets/whiskey.png',
+    imageSize: 61,
+    selected: false,
+  },
+  {
+    name: 'Ferramentas',
+    image: '/assets/ferramentas.png',
+    imageSize: 61,
+    selected: false,
+  },
+  {
+    name: 'Saúde',
+    image: '/assets/cuidados-de-saude.png',
+    imageSize: 61,
+    selected: false,
+  },
+  {
+    name: 'Esportes e Fitness',
+    image: '/assets/corrida.png',
+    imageSize: 61,
+    selected: false,
+  },
+  {
+    name: 'Moda',
+    image: '/assets/moda.png',
+    imageSize: 63,
+    selected: false,
+  },
 ];
 
 function CategoryList() {
